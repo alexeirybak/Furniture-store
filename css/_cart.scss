@@ -1,0 +1,192 @@
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+
+    &-content {
+        grid-column: span 8;
+
+        &-name {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 14px;
+        }
+
+        &-item {
+            border-top: 0.5px solid #CACDD8;
+            padding-top: 25px;
+            padding-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: background 0.3s;
+            box-sizing: border-box;
+
+            &:hover {
+                box-shadow: 0 0 5px #ccc;
+                border: none;
+                padding-right: 5px;
+                padding-left: 12px;
+            }
+        }
+
+        &-button {
+            display: flex;
+            gap: 7px;
+            margin-top: 18px;
+        }
+
+        &-left {
+            display: flex;
+            gap: 32px;
+        }
+
+        &-result {
+            box-sizing: border-box;
+            width: 200px;
+            height: 37px;
+            border: 1px solid $color-dark;
+            border-radius: 50px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: #020202;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+
+            &-form {
+                align-self: center;
+                width: 290px;
+            }
+
+            &:hover {
+                background: $color-dark;
+                color: $color-text;
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 276px;
+
+        &-heading {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: $color-dark;
+        }
+
+        &-description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #888888;
+        }
+
+        &-price {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #050505;
+        }
+    }
+
+    &-link-box {
+        display: flex;
+        gap: 30px;
+    }
+
+    &-choice {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 210%;
+        text-decoration-line: underline;
+        color: $color-dark;
+    }
+
+    &-input {
+        height: 51px;
+        width: 71px;
+        background: #F7F6F6;
+        border-radius: 6px;
+        outline: none;
+        box-sizing: border-box;
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 210%;
+        text-align: center;
+        color: $color-dark;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &-form {
+        background: #F7F6F6;
+        border-radius: 20px;
+        height: 556px;
+        grid-column: span 4;
+    }
+}
+
+.img-cart {
+    max-height: 173px;
+}
+
+.form {
+    padding-top: 42px;
+    padding-left: 27px;
+    padding-right: 32px;
+
+    &-box {
+        padding-top: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 41px;
+    }
+
+    &-item {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #CACDD8;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-dark;
+        outline: none;
+        padding-bottom: 3px;
+        font-family: "Montserrat", sans-serif;
+
+        &::placeholder {
+            color: $color-dark;
+        }
+    }
+
+    &-heading {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: $color-dark;
+    }
+
+    &-total {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $color-dark;
+        margin-top: 23px;
+        margin-bottom: 18px;
+        text-align: center;
+    }
+}
